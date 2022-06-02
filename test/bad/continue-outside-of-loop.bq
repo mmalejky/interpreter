@@ -1,0 +1,4 @@
+def int fun(int n) {
+    continue;
+}
+fun(0);

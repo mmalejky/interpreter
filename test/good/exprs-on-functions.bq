@@ -1,0 +1,19 @@
+int x = 1;
+bool t = true;
+{
+    def int get1(int n) {
+        return x;
+    }
+
+    def bool getTrue(int n) {
+        return t;
+    }
+
+    int y = 2;
+    bool p = false;
+
+    print get1(0)*(get1(0) + get1(0)) > get1(0);
+    print (getTrue(0) || p) && (getTrue(0) || p);
+    print !getTrue(0);
+    print -get1(0);
+}

@@ -1,0 +1,4 @@
+def int fun(int x) {
+    print "test";
+}
+fun(0);

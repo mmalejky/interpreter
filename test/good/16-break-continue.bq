@@ -1,0 +1,59 @@
+/* Count number of prime numbers in [l, r]. Returns informative string.
+   Result is stored on count variable reference.
+*/
+def string primes(int l, int r, int &count) {
+
+  // Works only for x > 2.
+  def bool isPrime(int x) {
+    int l = 2, r = x / 2;
+    while (l < r) {
+      if (x % l == 0) {
+        return false;
+      }
+      l++;
+    }
+    return true;
+  }
+
+  count = 0;
+  string foundStr = "Prime numbers found.";
+  string notFoundStr = "Prime numbers not found.";
+  print l;
+  print r;
+  if (l > r || l < 2) {
+    return notFoundStr;
+  }
+
+  bool found = false;
+  if (l == 2) {
+    found = true;
+    count++;
+  }
+
+  while (true) {
+    if (l > r) {
+      break;
+    }
+    if (l % 2 == 0) {
+      l++;
+      continue;
+    }
+    if (isPrime(l)) {
+      found = true;
+      count++;
+    }
+    l++;
+  }
+
+  print "test count: ";
+  print count;
+  if (found) {
+    return foundStr;
+  } else {
+    return notFoundStr;
+  }
+}
+
+int count = 42;
+print primes(2,12, count);
+print count;

@@ -1,0 +1,19 @@
+def int getInt(int x) {
+  return x;
+}
+
+def string getString(string x) {
+  return x;
+}
+
+def bool getBool(bool x) {
+  return x;
+}
+
+int a = 2137;
+string b = "Hello world";
+bool c = true;
+
+print getInt(a);
+print getString(b);
+print getBool(c);
